@@ -1,0 +1,53 @@
+@import '../src/Common/styles/sass/variables';
+@import '../src/Common/styles/sass/mixins';
+
+.project {
+    width: 250px;
+    background-color: $bgColor1;
+    @include flex(column, flex-start, center, nowrap);
+    border-radius: 10px;
+    margin: 25px;
+    box-shadow: 0 10px 25px 0 rgba(10, 115, 121, 0.14); /* Параметры тени */
+    .image {
+        width: 100%;
+        height: 150px;
+        @include flex(column, center, center, nowrap);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 10px 10px 0 0;
+        .viewButton {
+            padding: 15px 20px;
+            background-color: $textColor;
+            color: $bgColor1;
+            cursor: pointer;
+            align-items: center;
+            border: 0;
+            &:hover {
+                color: $textColor;
+                background-color: $bgColor1;
+                transition: background-color 0.55s;
+            }
+        }
+
+    }
+    .projectInfo {
+        padding: 25px 20px;
+        .projectTitle {
+            font-family: "Roboto", sans-serif;
+            font-size: 16px;
+            line-height: 1.2;
+            color: $textColor1;
+            font-weight: 300;
+            letter-spacing: 1px;
+            margin: 0 0 5px;
+        }
+        .description {
+            font-family: "Roboto", sans-serif;
+            font-size: 12px;
+            line-height: 1.8;
+            font-weight: 400;
+            color: $textColor;
+        }
+    }
+}

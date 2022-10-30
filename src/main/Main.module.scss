@@ -1,0 +1,51 @@
+@import '../common/styles/sass/variables';
+@import '../common/styles/sass/mixins';
+
+.mainBlock {
+  min-height: 100vh;
+  @include flex(row, center, center, nowrap);
+
+  .container {
+    @include container();
+    @include flex(row, space-between, center, wrap);
+
+    .greeting {
+      @include flex(column, flex-start, flex-start, nowrap);
+
+      span {
+        @include text($titleFontFamilyStyle, 18px, 0.5, $textColor, 300);
+        letter-spacing: 2px;
+        margin: 0 0 15px;
+
+
+        &:nth-child(2n) {
+          letter-spacing: 2px;
+          margin: 10px 0;
+          @include text($descriptionFontFamilyStyle, 40px, 1, $textColor1, 400);
+        }
+        &:nth-child(3n) {
+          letter-spacing: 2px;
+          @include text($descriptionFontFamilyStyle, 20px, 1, $textColor1, 400);
+        }
+      }
+    }
+  }
+
+  h1 {
+    @include text($titleFontFamilyStyle, 30px, 2, $textColor1, 200);
+    margin: 0;
+  }
+
+  .photo {
+    position: relative;
+    width: 500px;
+    height: 400px;
+    background-image: url("../Common/images/MyPhoto.jpg");
+    background-size: 170%;
+    background-position-x: right;
+    border-radius: 10px;
+  }
+}
+
+
+

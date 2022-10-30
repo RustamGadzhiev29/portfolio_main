@@ -1,0 +1,30 @@
+@import './variables';
+
+@mixin text($fontFamily, $fontSize, $lineHeight, $color, $fontWeight) {
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  color: $color;
+  font-weight: $fontWeight;
+}
+
+@mixin container() {
+  //border: 1px solid;
+  height: 100%;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  //flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  //min-height: 100%;
+  padding: 50px 0;
+}
+
+@mixin flex($direction, $justifyContent, $alignItems, $wrap) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content:  $justifyContent;
+  align-items: $alignItems;
+  flex-wrap:  $wrap;
+}

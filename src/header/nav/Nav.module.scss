@@ -1,0 +1,111 @@
+@import '/src/Common/styles/sass/mixins';
+@import '/src/Common/styles/sass/variables';
+
+.nav {
+  //padding-right: 100px;
+  @include flex(row, flex-end, center, nowrap);
+  width: 100%;
+  position: relative;
+  @media screen and (max-width: 400px){
+    display: none;
+  }
+
+  a {
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: $textColor1;
+    padding: 20px;
+
+    &:hover {
+      color:$bgColor1
+    }
+
+    &:hover:before{
+      content: "";
+      position: absolute;
+      background: $bgColor1;
+      height: 1px;
+      bottom: -5px;
+      left: 0;
+      transform: scaleX(0);
+      width: 100%;
+    }
+  }
+  //a::before {
+  //  content: "";
+  //  position: absolute;
+  //  background: $bgColor1;
+  //  height: 1px;
+  //  bottom: -5px;
+  //  left: 0;
+  //  transform: scaleX(0);
+  //  width: 100%;
+  //}
+
+  .active {
+    color: $bgColor1
+  }
+
+
+
+}
+
+//.nav {
+//  @include flex(row, space-between, center, nowrap);
+//  width: 30%;
+//  height: 50%;
+//  position: relative;
+//  a{
+//    @include text($titleFontFamilyStyle, 15px, 1.5, $textColor1, 300);
+//    text-decoration: none;
+//    text-transform: uppercase;
+//    position: relative;
+//
+//  }
+//&::before {
+//  content: "";
+//  position: absolute;
+//  background: $bgColor1;
+//  height: 1px;
+//  bottom: -5px;
+//  left: 0;
+//  transform: scaleX(0);
+//  width: 100%;
+//}
+//
+//
+//
+//  //.navLink {
+//  //  @include text($titleFontFamilyStyle, 15px, 1.5, $textColor1, 300);
+//  //  text-decoration: none;
+//  //  text-transform: uppercase;
+//  //  position: relative;
+//
+//    //&:hover {
+//    //  color: $bgColor1;
+//    //  transition: color 0.35s;
+//    //}
+//
+//    //&::before {
+//    //  content: "";
+//    //  position: absolute;
+//    //  background: $bgColor1;
+//    //  height: 1px;
+//    //  bottom: -5px;
+//    //  left: 0;
+//    //  transform: scaleX(0);
+//    //  width: 100%;
+//    //}
+//
+//    //&:hover::before {
+//    //  transform: scaleX(1);
+//    //  transition: trasform 0.25s;
+//    //}
+//    .active {
+//      width: 100%;
+//      color: $textColor;
+//    }
+//
+//  //}
+//}
