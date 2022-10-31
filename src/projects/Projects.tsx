@@ -4,6 +4,7 @@ import Project from "./project/Project";
 import todoImage from "../Common/images/TodoList.jpg"
 import socialImage from "../Common/images/SocialNetwork.jpg"
 import counterImage from "../Common/images/Counter.jpg"
+import ipadImage from "../Common/images/IpadImage.jpg"
 import Title from "../Common/Components/Title/Title";
 import {Fade} from "react-awesome-reveal";
 
@@ -27,11 +28,15 @@ function Projects() {
     const counter = {
         backgroundImage: `url(${counterImage})`,
     };
+    const ipad = {
+        backgroundImage: `url(${ipadImage})`,
+    };
 
     const titleButton= "View"
     const counterLink = "https://rustamgadzhiev29.github.io/counter"
     const todolistLink = "https://rustamgadzhiev29.github.io/todolist"
     const socialNetworkLink = "https://rustamgadzhiev29.github.io/social-network-log"
+    const ipadLink = "https://rustamgadzhiev29.github.io/ipad-demo"
 
 
     return <div id={"Projects"} className={s.projectsBlock}>
@@ -51,6 +56,9 @@ function Projects() {
                              description={'a project, where you can assess my skills to learn something new. Every time ' +
                                  'I\'ve learned new  or technology I try to implement it here. So it\'s a kind of' +
                                  'playground of my .  on gh pages'}/>
+                    <Project link ={ipadLink} titleButton={titleButton} style={ipad} title={'Counter'}
+                             description={'This is demo version of Ipad with drag and drop of icons, local storage,' +
+                                 ' 4 different positions depends of size of display.'}/>
                 </Fade>
             </div>
         </div>
