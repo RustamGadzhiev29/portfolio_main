@@ -17,17 +17,17 @@ function Footer() {
 
             <div className={s.footer}>
                 <div className={s.contacts}>
-                    <a href={''}>
+                    <a href={'https://www.facebook.com/profile.php?id=100078483018245'}>
                         <FontAwesomeIcon className={s.contact} icon={faFacebook}/>
                     </a>
                 </div>
                 <div className={s.contacts}>
-                    <a href={''}>
+                    <a href={'https://t.me/rustam_gadz'}>
                         <FontAwesomeIcon className={s.contact} icon={faTelegramPlane}/>
                     </a>
                 </div>
                 <div className={s.contacts}>
-                    <a href={''}>
+                    <a href={'https://github.com/RustamGadzhiev29'}>
                         <FontAwesomeIcon className={s.contact} icon={faSquareGithub}/>
                     </a>
                 </div>

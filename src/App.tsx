@@ -47,7 +47,6 @@ function App() {
             id: index,
         }))
     }
-
     return <div className={styles.App}>
         <Header navLinks={modifiedData(navLinks)}/>
         <Main/>

@@ -1,5 +1,6 @@
 import React from 'react'
 import s from './Project.module.scss'
+import Button from "../../Common/Components/button/Button";
 
 type ProjectPropsType = {
     title: string,
@@ -7,12 +8,14 @@ type ProjectPropsType = {
         backgroundImage: string
     }
     description: string
+    link:string
+    titleButton:string
 }
 
 function Project(props: ProjectPropsType) {
     return <div className={s.project}>
         <div className={s.image} style={props.style}>
-            <button className={s.viewButton}>View</button>
+            <Button  link={props.link} titleButton={props.titleButton}/>
         </div>
         <div className={s.projectInfo}>
             <h3 className={s.projectTitle}>{props.title}</h3>
